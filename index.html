@@ -1,16 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <title></title>
-  <style>
-    body { font-family: Arial; max-width: 800px; margin: 20px auto; }
-    h1 { color: #2c3e50; }
-    img { width: 100%; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: left; /* 使内容左对齐 */
+            margin-left: 20px; /* 让内容稍微偏左一点 */
+        }
+        .pagination {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .pagination span {
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .spinner {
+            margin-top: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        img {
+            display: none;
+            margin-top: 20px;
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
-  <h1>你被骗了</h1>
-  <p></p>
-  <img src="" alt="">
+
+    <div class="content">
+        <p><strong>1. Dimension：</strong></p>
+        <p>paraphrase: The size or extent of something in a particular direction, such as width, height, or depth; or a measurable aspect of something.</p>
+        <p>example: In physics, space is considered to have three dimensions: length, width, and height.</p>
+        <p><strong>2. Vibrate：</strong></p>
+        <p>paraphrase: To move quickly back and forth or up and down.</p>
+        <p>example: The strings vibrated in the wind.</p>
+        <p><strong>3. Frequency：</strong></p>
+        <p>paraphrase: The number of times something happens in a period of time.</p>
+        <p>example: The frequency of the sound is too high for humans to hear.</p>
+        <p><strong>4. Magnitude：</strong></p>
+        <p>paraphrase: The great size or importance of something.</p>
+        <p>example: The earthquake had a magnitude of 7.8 on the Richter scale.</p>
+        <p><strong>5. Rewind：</strong></p>
+        <p>paraphrase: To move something (like a tape or video) backwards to an earlier point.</p>
+        <p>example: He rewound the video to watch the scene again.</p>
+        <p><strong>6. Unveil：</strong></p>
+        <p>paraphrase: To show or reveal something for the first time.</p>
+        <p>example: The company will unveil the new product at the press conference.</p>
+        <p><strong>7. Planck Time：</strong></p>
+        <p>paraphrase: I'll explain later.</p>
+        <p><strong>8. Poincare's Return：</strong></p>
+        <p>paraphrase: I'll explain later.</p>
+    </div>
+
+    <div class="pagination">
+        <span onclick="window.location.href='page2.html'">1</span>
+        <span onclick="window.location.href='page2.html'">2</span>
+    </div>
+
 </body>
 </html>
