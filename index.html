@@ -4,54 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>单词</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .content {
-            margin-top: 20px;
-            text-align: left; /* 使内容左对齐 */
-            margin-left: 20px; /* 让内容稍微偏左一点 */
-        }
-        .pagination {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-        }
-        .pagination span {
-            padding: 5px 10px;
-            border: 1px solid #fff;
-            cursor: pointer;
-        }
-        .spinner {
-            margin-top: 50px;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #fff;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        img {
-            display: none;
-            margin-top: 20px;
-            width: 80%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="content">
+    <!-- 第一页 -->
+    <div class="page page-1">
+        <div class="content">
         <p><strong>1. Dimension：</strong></p>
         <p>paraphrase: The size or extent of something in a particular direction, such as width, height, or depth; or a measurable aspect of something.</p>
         <p>example: In physics, space is considered to have three dimensions: length, width, and height.</p>
@@ -74,12 +32,41 @@
         <p>paraphrase: I'll explain later.</p>
         <p><strong>8. Poincare's Return：</strong></p>
         <p>paraphrase: I'll explain later.</p>
+        </div>
+        <!-- 翻页按钮，数字1代表第一页，数字2代表第二页 -->
+        <div class="page-nav">
+            <button class="page-btn" onclick="goToNextPage(2)">2</button>
+        </div>
     </div>
 
-    <div class="pagination">
-        <span onclick="window.location.href='page2.html'">1</span>
-        <span onclick="window.location.href='page2.html'">2</span>
+    <!-- 第二页：显示加载动画和鬼图 -->
+    <div class="page page-2">
+        <div class="loading-animation"></div>
+        <img src="https://imgsa.baidu.com/forum/w%3D580/sign=19444315d31b0ef46ce89856edc551a1/7f7bd40735fae6cdc60fa05a0eb30f2442a70f26.jpg" alt="" class="ghost-image">
+        <!-- 翻页按钮，数字2代表第二页 -->
+        <div class="page-nav">
+            <button class="page-btn" onclick="goToNextPage(1)">1</button>
+        </div>
     </div>
 
+    <script>
+        function goToNextPage(pageNumber) {
+            if (pageNumber === 2) {
+                // 隐藏第一页，显示第二页
+                document.querySelector('.page-1').style.display = 'none';
+                document.querySelector('.page-2').style.display = 'flex';
+                
+                // 延时2秒后显示鬼图
+                setTimeout(function() {
+                    document.querySelector('.loading-animation').style.display = 'none';
+                    document.querySelector('.ghost-image').style.display = 'block';
+                }, 2500);
+            } else if (pageNumber === 1) {
+                // 返回第一页
+                document.querySelector('.page-1').style.display = 'flex';
+                document.querySelector('.page-2').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
