@@ -23,6 +23,10 @@ body, html {
     align-items: center;
 }
 
+.top-space {
+    height: 100px; /* 空白区域的高度，你可以根据需要调整 */
+}
+
 .page-1 {
     display: flex;
     flex-direction: column;
@@ -37,13 +41,21 @@ body, html {
     position: relative;
 }
 
-/* 翻页按钮样式 */
 .page-nav {
-    position: absolute;
-    bottom: 10px;
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    margin-top: 200px; /* 翻页按钮与空白区域之间的距离 */
+}
+
+.instruction {
+    font-size: 20px;
+    color: red;
+    margin-right: 10px;
+}
+
+.instruction-text {
+    margin-right: 10px;
 }
 
 .page-btn {
@@ -74,8 +86,8 @@ body, html {
 /* 鬼图样式 */
 .ghost-image {
     display: none;
-    width: 850px;
-    height: 988px;
+    width: 737px;
+    height: 856px;
     object-fit: cover;
     position: absolute;
     top: 50%;
