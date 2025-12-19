@@ -15,8 +15,8 @@ body, html {
 /* 页面基础布局 */
 .page {
     display: none;
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 400vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .top-space {
-    height: 100px; /* 空白区域的高度，你可以根据需要调整 */
+    height: 300px; /* 空白区域的高度，你可以根据需要调整 */
 }
 
 .page-1 {
@@ -45,7 +45,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px; /* 翻页按钮与空白区域之间的距离 */
+    margin-top: 400px; /* 翻页按钮与空白区域之间的距离 */
 }
 
 .instruction {
